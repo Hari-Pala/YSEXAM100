@@ -37,7 +37,7 @@ function Give_Exam() {
                     setuserId(UserId);
                     //console.log(Mail_Id);
                    // console.log(decoded.Id);
-;                const response = await axios.post(`http://localhost:3000/exams/${id}`);
+;                const response = await axios.post(`https://ysexam100.onrender.com/exams/${id}`);
                 setExam(response.data);
               
                initializeTimer(response.data.Time, response.data.End_Time);
@@ -181,7 +181,7 @@ function Give_Exam() {
         
         
         try {
-            const response = await axios.post('http://localhost:3000/submit_exam', { examId: id, responses }, {
+            const response = await axios.post('https://ysexam100.onrender.com/submit_exam', { examId: id, responses }, {
                 headers: { 
                     Authorization: 'Bearer ' + localStorage.getItem('jwtToken') 
                 }

@@ -24,7 +24,7 @@ function View_Student_Response() {
                  setrole(localStorage.getItem("role"));
                                 if (token) {
                                     console.log(student_id+" "+exam_id);
-                                    const response = await axios.post(`http://localhost:3000/see_response`, {
+                                    const response = await axios.post(`https://ysexam100.onrender.com/see_response`, {
                                         Student_id: student_id,
                                         exam_id: exam_id,
                                     });

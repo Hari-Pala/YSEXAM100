@@ -29,7 +29,7 @@ function Check_Student_Response() {
                 }
 
                 const response = await axios.post(
-                    `http://localhost:3000/check_exam_paper/${id}`,
+                    `https://ysexam100.onrender.com/check_exam_paper/${id}`,
                    {mail_id:Mail_Id,role:role}
                 );
                  setIsToggled(response.data.status);
@@ -70,7 +70,7 @@ function Check_Student_Response() {
             setrole(role);
     
             const response = await axios.post(
-                `http://localhost:3000/check_exam_paper/toggle/${id}`,
+                `https://ysexam100.onrender.com/check_exam_paper/toggle/${id}`,
                 { mail_id: Mail_Id, role: role },
             );
             console.log(response);  // log the response to inspect
@@ -100,7 +100,7 @@ function Check_Student_Response() {
             setrole(role);
     
             const response = await axios.post(
-                `http://localhost:3000/check_exam_paper/check/${id}`,
+                `https://ysexam100.onrender.com/check_exam_paper/check/${id}`,
                 { mail_id: Mail_Id, role: role }, 
                 { headers: { Authorization: `Bearer ${token}` } } 
             );

@@ -26,7 +26,7 @@ function Check_Student_Response_Manually() {
                  setrole(localStorage.getItem('role'));
                                 if (token) {
                                     
-                                    const response = await axios.post(`http://localhost:3000/see_response`, {
+                                    const response = await axios.post(`https://ysexam100.onrender.com/see_response`, {
                                         Student_id: student_id,
                                         exam_id: exam_id,
                                     });
@@ -143,7 +143,7 @@ function Check_Student_Response_Manually() {
         try {
          
             const response = await axios.post(
-                `http://localhost:3000/check_exam_paper/${exam_id}/${student_id}`,
+                `https://ysexam100.onrender.com/check_exam_paper/${exam_id}/${student_id}`,
                 {
                     marks: marks,
                     Total_Score: student_score,

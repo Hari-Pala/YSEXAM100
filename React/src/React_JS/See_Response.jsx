@@ -14,7 +14,7 @@ function See_Response() {
         const fetchStudents = async () => {
             try {
                 const role=localStorage.getItem('role');
-                const response = await axios.get(`http://localhost:3000/see_response/${id}`);
+                const response = await axios.get(`https://ysexam100.onrender.com/see_response/${id}`);
                 setStudents(response.data.students);
                setrole(role);
             } catch (error) {

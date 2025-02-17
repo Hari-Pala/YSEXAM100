@@ -36,7 +36,7 @@ function ChangePassword() {
 
            console.log(Old_Password+" "+New_Password+" "+Mail_Id+" "+role);
            const response = await axios.post(
-            'http://localhost:3000/change',
+            'https://ysexam100.onrender.com/change',
             { 
                 Old_Password, 
                 New_Password, 

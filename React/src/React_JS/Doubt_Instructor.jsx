@@ -21,7 +21,7 @@ function Doubt_Instructor() {
                     const decoded = jwtDecode(token);
                     const Mail_Id = decoded.Mail_Id;
 
-                    const response = await axios.post('http://localhost:3000/doubt_instructor', { Mail_Id: Mail_Id });
+                    const response = await axios.post('https://ysexam100.onrender.com/doubt_instructor', { Mail_Id: Mail_Id });
                     setDoubt(response.data);
                     setLoading(false);
                 } else {
@@ -55,7 +55,7 @@ function Doubt_Instructor() {
                 const decoded = jwtDecode(token);
                 const Mail_Id = decoded.Mail_Id;
 
-                await axios.post('http://localhost:3000/answer_doubt', {
+                await axios.post('https://ysexam100.onrender.com/answer_doubt', {
                     doubtId: selectedDoubt._id,
                     answer: answer,
                     Mail_Id:Mail_Id,

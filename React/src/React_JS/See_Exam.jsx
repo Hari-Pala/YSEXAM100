@@ -27,7 +27,7 @@ function See_Exam() {
                                    
                                     const Mail_Id = decoded.Mail_Id;
                                      
-                                    const response = await axios.post(`http://localhost:3000/myexam/see/${id}`, {
+                                    const response = await axios.post(`https://ysexam100.onrender.com/myexam/see/${id}`, {
                                         Mail_Id:Mail_Id});      
                                         const examData = response.data.exam;
             const currentTime = new Date().getTime(); 

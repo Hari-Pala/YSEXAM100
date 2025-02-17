@@ -23,7 +23,7 @@ function Exams() {
                     const Mail_Id = decoded.Mail_Id; 
                     const role=localStorage.getItem('role');
                     setrole(role);
-                    const response = await axios.post('http://localhost:3000/privious_exams', { mail_id: Mail_Id,role:role });
+                    const response = await axios.post('https://ysexam100.onrender.com/privious_exams', { mail_id: Mail_Id,role:role });
                     
                     setExams(response.data);
                     setLoading(false);

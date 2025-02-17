@@ -197,7 +197,7 @@ function AddExamPaper() {
       const decoded = jwtDecode(token);
       const Mail_Id = decoded.Mail_Id;
       const role=localStorage.getItem("role");
-      const response = await axios.post("http://localhost:3000/add_exam_paper", {
+      const response = await axios.post("https://ysexam100.onrender.com/add_exam_paper", {
         examData,
         Mail_Id,
         role,

@@ -17,7 +17,7 @@ function Ask_Doubt() {
         const decoded = jwtDecode(token);
         const Mail_Id = decoded.Mail_Id; 
   
-        const response = await axios.post('http://localhost:3000/ask', {
+        const response = await axios.post('https://ysexam100.onrender.com/ask', {
           Text: doubt,
           Mail_Id: Mail_Id
         });

@@ -27,7 +27,7 @@ function Profile() {
                     return;
                 }
 
-                const response = await axios.post('http://localhost:3000/profile', {
+                const response = await axios.post('https://ysexam100.onrender.com/profile', {
                     Mail_Id: storedMailId,
                     role: role,
                 });

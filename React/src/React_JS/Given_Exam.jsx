@@ -26,7 +26,7 @@ function Given_Exam() {
                                    
                                     const Mail_Id = decoded.Mail_Id;
                                      
-                                    const response = await axios.post(`http://localhost:3000/myexam/${id}`, {
+                                    const response = await axios.post(`https://ysexam100.onrender.com/myexam/${id}`, {
                                         Mail_Id: Mail_Id});    
                                         if(!response.data.exam.Checked)
                                             {

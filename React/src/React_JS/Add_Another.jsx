@@ -34,7 +34,7 @@ function Add_Another() {
             const decoded = jwtDecode(token);
             const My_Mail_Id = decoded.Mail_Id;
             formData.My_Mail_Id=My_Mail_Id;
-      const response = await axios.post('http://localhost:3000/add', formData);
+      const response = await axios.post('https://ysexam100.onrender.com/add', formData);
       setSuccessfullMessage('Person Added Successfully');
       setTimeout(() => setSuccessfullMessage(''),3000); 
       

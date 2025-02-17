@@ -18,7 +18,7 @@ function Exams() {
                 if (token) {
                     const decoded = jwtDecode(token);
                     const Mail_Id = decoded.Mail_Id; 
-                    const response = await axios.post('http://localhost:3000/exams', { mail_id: Mail_Id });
+                    const response = await axios.post('https://ysexam100.onrender.com/exams', { mail_id: Mail_Id });
                     setExams(response.data);
                     setLoading(false);
                 } else {

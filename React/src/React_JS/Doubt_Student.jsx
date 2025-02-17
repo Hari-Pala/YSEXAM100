@@ -20,7 +20,7 @@ function Doubt_Student() {
                     const decoded = jwtDecode(token);
                     const Mail_Id = decoded.Mail_Id;
 
-                    const response = await axios.post('http://localhost:3000/doubt_student', { Mail_Id: Mail_Id });
+                    const response = await axios.post('https://ysexam100.onrender.com/doubt_student', { Mail_Id: Mail_Id });
                     setDoubt(response.data);
                     setLoading(false);
                 } else {

@@ -36,7 +36,7 @@ function Index() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/login', {
+            const response = await axios.post('https://ysexam100.onrender.com/login', {
                 id: Id,
                 password: Password
             });
@@ -70,7 +70,7 @@ function Index() {
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/signup', {
+            const response = await axios.post('https://ysexam100.onrender.com/signup', {
                 id: Id,
                 password: Password,
                 mail_id: Mail_Id,
@@ -97,7 +97,7 @@ function Index() {
     const handleVerifyCode = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/verify-code', {
+            const response = await axios.post('https://ysexam100.onrender.com/verify-code', {
                 id: Id,
                 password: Password,
                 mail_id: Mail_Id,
@@ -130,7 +130,7 @@ function Index() {
     }
     const handleResendCode = async () => {
         if (!canResend) return;
-        await axios.post('http://localhost:3000/send-verification', { mail_id: Mail_Id });
+        await axios.post('https://ysexam100.onrender.com/send-verification', { mail_id: Mail_Id });
         setTimer(30);
         setCanResend(false);
     };
@@ -138,7 +138,7 @@ function Index() {
         
         setSuccessfullMessage("Verification Code Sent Successfully ");
         setTimeout(() => setSuccessfullMessage(''), 2000); 
-        await axios.post('http://localhost:3000/send-verification', { mail_id: Mail_Id });
+        await axios.post('https://ysexam100.onrender.com/send-verification', { mail_id: Mail_Id });
         // if (!canResend) return;
         // setTimer(30);
         // setCanResend(false);
@@ -150,7 +150,7 @@ function Index() {
         try
         {
             // console.log(Mail_Id+" "+verificationCode);
-       const response=await  axios.post('http://localhost:3000/forgotpassword',{mail_id:Mail_Id,verificationCode:verificationCode});
+       const response=await  axios.post('https://ysexam100.onrender.com/forgotpassword',{mail_id:Mail_Id,verificationCode:verificationCode});
         console.log(response);
             if(response.status===200)
             {
@@ -181,7 +181,7 @@ function Index() {
         }
         try
         {
-             const response=await axios.post('http://localhost:3000/forgotpassword/password',{mail_id:Mail_Id,Password:newPassword});
+             const response=await axios.post('https://ysexam100.onrender.com/forgotpassword/password',{mail_id:Mail_Id,Password:newPassword});
              if(response.status===200)
              {
                 setSuccessfullMessage("Password Change Successfully");

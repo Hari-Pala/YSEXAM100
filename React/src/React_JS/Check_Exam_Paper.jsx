@@ -22,7 +22,7 @@ function Check_Exam_Paper() {
                 if (token) {
                     const decoded = jwtDecode(token);
                     const Mail_Id = decoded.Mail_Id; 
-    const response = await axios.post('http://localhost:3000/check_exam_paper/all_exams', { mail_id: Mail_Id,role:role });
+    const response = await axios.post('https://ysexam100.onrender.com/check_exam_paper/all_exams', { mail_id: Mail_Id,role:role });
                 
                     setExams(response.data.answerSheets);
 
